@@ -3,28 +3,39 @@
 
   <h1>Products</h1>
 
-  <table>
-    <thead>
-      <tr>
-        <!-- <th>Name</th>
-        <th>Description</th>
-        <th>Picture</th> -->
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
+  <div class='container'>
+    <div class='row text-center'>
       <% @products.each do |product| %>
-      <tr>
-        <td class='product-name'><%= product.name %></td>
-        <td><%= image_tag(product.image_url, class: 'img-responsive image-catcup', alt: 'Cat shaped cup') %><span class='product-description'>"<%= product.description %>"</span></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class='col-md-6'>
+        <div class='thumbnail'>
+          <div class='tea-title'>
+            <h2><%= product.name %></h2><span class='tea-type-color text-muted'>(<%= product.colour.upcase %>)</span>
+            <hr />
+          </div>
+          <%= image_tag(product.image_url, class: 'img-responsive tea-image') %>
+          <div class='caption'>
+            <h4 class='product-description'>"<%= product.description %>"</h4>
+          </div>
+          <hr />
+          <div class='thumbnail-product-information'>
+            <div class='row'>
+              <div class='col-sm-6'>
+
+                <%= link_to 'Show', product %>
+                <%= link_to 'Edit', edit_product_path(product) %>
+                <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+              </div>
+              <div class='col-sm-6'>
+                <p>$<%= product.price %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <% end %>
-    </tbody>
-  </table>
+    </div>
+  </div>
 
   <br>
 
