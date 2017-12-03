@@ -23,7 +23,7 @@
           <span class="icon-bar"></span>
         </button>
         <!-- BRAND -->
-        <a class="navbar-brand" href="#">Chamisama</a>
+        <%= link_to "Chamisama", simple_pages_index_path, class: "navbar-brand" %>
 
       </div>
 
@@ -31,9 +31,9 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
 
-          <li><a href="#">About Us<span class="sr-only">(current)</span></a></li>
+          <li><%= link_to "About us", simple_pages_about_path %></li>
 
-          <li><a href="#">Contact Us</a></li>
+          <li><%= link_to "Contact Us", simple_pages_contact_path %></li>
 
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tea Types <span class="caret"></span></a>
@@ -45,6 +45,8 @@
               <li><a href="#">All Japanese Teas</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="#">All Chinese Teas</a></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to "All Products", products_path %></li>
             </ul>
           </li>
 
