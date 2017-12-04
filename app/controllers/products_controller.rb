@@ -6,7 +6,10 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-      @products = Product.search(search_term)
+      @products = Product.search_by_name(search_term)
+    elsif params[:tea_color]
+      search_term = params[:tea_color]
+      @products = Product.search_by_tea_color(search_term)
     else
       @products = Product.all
     end
