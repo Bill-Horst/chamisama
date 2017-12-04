@@ -35,6 +35,14 @@
 
           <li><%= link_to "Contact Us", simple_pages_contact_path %></li>
 
+          <li>
+            <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+            <%= form.label :q, 'Search for:' %>
+            <%= form.text_field :q, id: 'q', value: params[:q] %>
+            <%= form.submit 'Search' %>
+            <% end %>
+          </li>
+
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tea Types <span class="caret"></span></a>
             <ul class="dropdown-menu">
