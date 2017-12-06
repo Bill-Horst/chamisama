@@ -16,3 +16,4 @@ class SimplePagesController < ApplicationController
   end
 
 end
+ 
