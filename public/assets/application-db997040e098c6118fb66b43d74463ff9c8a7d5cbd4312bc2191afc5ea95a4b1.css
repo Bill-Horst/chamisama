@@ -1,0 +1,188 @@
+/* line 9, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-index .product-background h1 {
+  color: black;
+  text-align: center;
+}
+/* line 14, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-index .product-background h4 {
+  font-size: 2em;
+}
+/* line 18, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-index .product-background .product-name {
+  font-size: 3em;
+  font-weight: bold;
+}
+/* line 23, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-index .product-background .product-description {
+  font-family: cursive;
+  font-size: 1.3em;
+}
+/* line 28, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-index .product-background .tea-image {
+  height: 100px;
+}
+
+/* line 38, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-show .product-name {
+  color: black;
+  font-size: 3em;
+  font-weight: bold;
+}
+/* line 44, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-show .product-description {
+  font-family: cursive;
+  font-size: 2em;
+}
+
+/* line 51, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+.tea-pics {
+  width: 50%;
+  margin: auto;
+}
+
+/* line 58, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+.product-form {
+  width: 50%;
+  margin: auto;
+}
+/* line 6, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+body {
+  padding-top: 50px;
+}
+
+/* line 10, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+.navbar {
+  background-color: #f7f7f7;
+  border-bottom-color: black;
+  border-bottom-width: 2px;
+  margin-bottom: 0px;
+}
+
+/* line 17, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#sign-in-button {
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+/* line 23, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+.nav li {
+  padding-right: 5px;
+}
+
+/* line 36, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#sp-about .sp-about-background .sp-about-content {
+  text-align: center;
+}
+
+/* line 55, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#sp-index .sp-index-background .sp-index-content {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+/* line 60, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#sp-index .sp-index-background .sp-index-content .image-catcup {
+  margin: auto;
+}
+
+/* line 75, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#thank-you-page {
+  height: 1200px;
+  background-image: url("arashiyama.jpg");
+  background-size: cover;
+}
+/* line 79, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#thank-you-page .thank-you-message-box {
+  width: 90%;
+  background-color: white;
+  margin: auto;
+  position: relative;
+  top: 20%;
+  text-align: center;
+  border-radius: 10px;
+  min-height: 40px;
+  opacity: .9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 91, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#thank-you-page .thank-you-message-box p {
+  font-size: 2em;
+  line-height: 35px;
+}
+
+/* line 103, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#contact-page {
+  background-image: url("arashiyama.jpeg");
+  background-size: cover;
+  min-height: 1200px;
+  padding-top: 50px;
+}
+/* line 110, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#contact-page .contact-background {
+  background-color: white;
+  opacity: .9;
+  padding: 50px;
+  border-radius: 30px;
+  width: 70%;
+  margin: auto;
+}
+/* line 119, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#contact-page .contact-form {
+  width: 90%;
+  margin: auto;
+}
+/* line 124, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#contact-page .company-address {
+  text-align: center;
+}
+/* line 128, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#contact-page .company-map {
+  height: 300px;
+}
+@media screen and (max-width: 920px) {
+  /* line 133, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+  #contact-page .contact-background {
+    width: 95%;
+  }
+}
+/* line 138, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#contact-page #map {
+  height: 100%;
+}
+
+/* line 148, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 153, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+body {
+  margin-bottom: 60px;
+}
+
+/* line 157, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f7f7f7;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
