@@ -4,22 +4,31 @@
 
 #product-index {
 
-  h1 {
-    color: black;
-  }
+  .product-background {
 
-  .product-name {
-    font-size: 3em;
-    font-weight: bold;
-  }
+    h1 {
+      color: black;
+      text-align: center;
+    }
 
-  .product-description {
-    font-family: cursive;
-    font-size: 2em;
-  }
+    h4 {
+      font-size: 2em;
+    }
 
-  .tea-image {
-    height: 100px;
+    .product-name {
+      font-size: 3em;
+      font-weight: bold;
+    }
+
+    .product-description {
+      font-family: cursive;
+      font-size: 1.3em;
+    }
+
+    .tea-image {
+      height: 100px;
+    }
+
   }
 
 }

@@ -1,18 +1,20 @@
 <div id='product-index'>
-  <p id="notice"><%= notice %></p>
+  <div class='product-background'>
+    <p id="notice"><%= notice %></p>
 
-  <h1>Products</h1>
+    <h1>Products</h1>
 
-  <div class='container'>
-    <div class='row text-center'>
-      <!-- <% @products.each do |product| %>
+    <div class='container'>
+      <div class='row text-center'>
+        <!-- <% @products.each do |product| %>
         <%= render partial: "product", locals: {product: product} %>
-      <% end %> -->
-      <%= render @products %>
+        <% end %> -->
+        <%= render @products %>
+      </div>
     </div>
+
+    <br>
+
+    <%= link_to 'New Product', new_product_path %>
   </div>
-
-  <br>
-
-  <%= link_to 'New Product', new_product_path %>
 </div>
