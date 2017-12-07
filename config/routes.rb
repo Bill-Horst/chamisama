@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}
+  # devise_for :users
   resources :users
   resources :products
+
   get 'simple_pages/about'
 
   get 'simple_pages/contact'
@@ -11,7 +14,7 @@ Rails.application.routes.draw do
   get 'simple_pages/landing_page'
 
   post 'simple_pages/thank_you'
-  
+
   root 'products#index'
 
   resources :orders, only: [:index, :show, :create, :destroy]

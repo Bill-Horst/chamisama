@@ -37,7 +37,7 @@
 
           <li>
             <%= form_with(url: products_path, method: 'get', local: true, class: "navbar-form") do |form| %>
-            <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control", placeholder: "enter name" %>
+            <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control", placeholder: "name of tea" %>
             <%= form.submit 'Search', class: "btn btn-default" %>
             <% end %>
           </li>
@@ -56,18 +56,12 @@
             </ul>
           </li>
 
-          <button id='sign-in-button' type="button" class="btn btn-default navbar-btn">Sign in</button>
-
-        </ul>
-
-        <ul class='nav pull-right'>
-          <li>
             <% if user_signed_in? %>
-            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+            <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'btn btn-default navbar-btn', id: 'sign-in-or-out-button') %>
             <% else %>
-            <%= link_to('Login', new_user_session_path) %>
+            <%= link_to('Login', new_user_session_path, class: 'btn btn-default navbar-btn', id: 'sign-in-or-out-button') %>
             <% end %>
-          </li>
+
         </ul>
 
       </div><!-- /.navbar-collapse -->

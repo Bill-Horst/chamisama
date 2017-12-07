@@ -1,3 +1,64 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// DEVISE ********
+
+// AUTHENTICATION PAGES
+
+#authentication-pages {
+
+  background-image: url('arashiyama.jpeg');
+  background-size: cover;
+  height: 1200px;
+  padding: 50px;
+
+  .authentication-pages-background {
+
+    padding: 10px 30px;
+    background-color: white;
+    opacity: .9;
+    width: 40%;
+    margin: auto;
+    border-radius: 10px;
+
+    .authentication-pages-content {
+      width: 100%;
+
+      h2 {
+        text-align: center;
+      }
+
+    }
+
+  }
+
+  @media screen and (max-width: 1100px){
+    .authentication-pages-background {
+      padding: 10px 30px;
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 750px){
+    .authentication-pages-background {
+      padding: 10px 30px;
+      width: 80%;
+    }
+  }
+
+}
+
+
+
+// END AUTHENTICATION PAGES
+
+
+// **SHARED LINKS BUTTONS**
+.shared-links-buttons {
+  line-height: 30px;
+  padding-top: 10px;
+}
+
+
+// END DEVISE *********

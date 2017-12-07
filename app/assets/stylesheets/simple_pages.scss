@@ -14,16 +14,24 @@ body { // To offset body for fixed navbar
   margin-bottom: 0px;
 }
 
-#sign-in-button {
+#sign-in-or-out-button {
   margin-right: 10px;
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
-.nav  {
-  li {
-    padding-right: 5px;
-  }
+.nav>li>a {
+  padding: 15px 10px;
 }
+
+.navbar-form {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#q {
+  max-width: 130px;
+}
+
 // END NAVBAR SECTION
 
 
