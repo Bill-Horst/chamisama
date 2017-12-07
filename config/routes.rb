@@ -20,3 +20,6 @@ Rails.application.routes.draw do
   resources :orders, only: [:index, :show, :create, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+
+# I forgot to check in to authentication branch so this is
+# to practice checking in on branches other than master
