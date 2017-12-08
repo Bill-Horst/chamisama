@@ -32,13 +32,23 @@
 <hr />
 
 <!-- THREE DESCRIPTIONS -->
-<div class='container'>
+<div class='container three-desc-section'>
   <div class='row'>
-    <% @products.each do |product| %>
     <div class='col-md-4'>
-      <%= image_tag(product.image_url, class: 'img-responsive tea-pics') %>
+      <h1>Japanese Tea</h1>
+      <%= image_tag('gmcha.jpg', class: 'img-responsive three-desc-pics') %>
+      <p>Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. </p>
     </div>
-    <% end %>
+    <div class='col-md-4'>
+      <h1>Chinese Tea</h1>
+      <%= image_tag('ooloncha.jpg', class: 'img-responsive three-desc-pics') %>
+      <p>Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. </p>
+    </div>
+    <div class='col-md-4'>
+      <h1>Tea Accessories</h1>
+      <%= image_tag('brewer.jpg', class: 'img-responsive three-desc-pics') %>
+      <p>Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. Stuff about the stuff. </p>
+    </div>
   </div>
 </div>
 <!-- END THREE DESCRIPTIONS -->

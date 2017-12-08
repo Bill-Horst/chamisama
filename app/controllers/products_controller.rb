@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
       @title = "All Teas From #{search_term}"
       @products = Product.search_by_country(search_term)
     else
-      @title = "All Teas"
+      @title = "All Products"
       @products = Product.all
     end
   end

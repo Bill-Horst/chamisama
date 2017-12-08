@@ -14,14 +14,6 @@ Product.delete_all
 Product.create(
   [
     {
-      name: 'Houjicha',
-      description: 'A brown-ish roasted green tea.',
-      image_url: 'hjcha.jpg',
-      colour: 'green',
-      country: 'Japan',
-      price: '21.99'
-    },
-    {
       name: 'Genmaicha',
       description: 'Green tea with roasted brown rice.',
       image_url: 'gmcha.jpg',
@@ -36,6 +28,22 @@ Product.create(
       colour: 'black',
       country: 'China',
       price: '19.99'
+    },
+    {
+      name: 'Houjicha',
+      description: 'A brown-ish roasted green tea.',
+      image_url: 'hjcha.jpg',
+      colour: 'green',
+      country: 'Japan',
+      price: '21.99'
+    },
+    {
+      name: 'Brewer',
+      description: 'Perfect for brewing loose tea.',
+      image_url: 'brewer.jpg',
+      colour: '',
+      country: '',
+      price: '69.99'
     },
     {
       name: 'Imperial Dragon',
@@ -84,14 +92,6 @@ Product.create(
       colour: '',
       country: '',
       price: '39.99'
-    },
-    {
-      name: 'Brewer',
-      description: 'Perfect for brewing loose tea.',
-      image_url: 'brewer.jpg',
-      colour: '',
-      country: '',
-      price: '69.99'
     }
   ]
 )
