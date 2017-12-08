@@ -4,8 +4,7 @@ class SimplePagesController < ApplicationController
   end
 
   def landing_page
-    @featured_product = Product.first
-    @products = Product.limit(4)
+    @products = Product.limit(3)
   end
 
   def thank_you
@@ -16,4 +15,3 @@ class SimplePagesController < ApplicationController
   end
 
 end
- 

@@ -8,8 +8,12 @@ class Product < ApplicationRecord
     end
   end
 
-  def self.search_by_tea_color(search_term)
-    Product.where("colour = ?", "#{search_term}")
+  def self.search_by_tea_color(color)
+    Product.where("colour = ?", "#{color}")
+  end
+
+  def self.search_by_country(country)
+    Product.where("country = ?", "#{country}")
   end
 
 end

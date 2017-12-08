@@ -23,7 +23,7 @@
           <span class="icon-bar"></span>
         </button>
         <!-- BRAND -->
-        <%= link_to "Chamisama", simple_pages_index_path, class: "navbar-brand" %>
+        <%= link_to "Chamisama", simple_pages_landing_page_path, class: "navbar-brand" %>
 
       </div>
 
@@ -48,9 +48,9 @@
               <li><%= link_to "Green Teas", products_path({ :tea_color => "green"}) %></li>
               <li><%= link_to "Black Teas", products_path({ :tea_color => "black"}) %></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">All Japanese Teas</a></li>
+              <li><%= link_to "All Japanese Teas", products_path({ :country => "Japan"}) %></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">All Chinese Teas</a></li>
+              <li><%= link_to "All Chinese Teas", products_path({ :country => "China"}) %></li>
               <li role="separator" class="divider"></li>
               <li><%= link_to "All Products", products_path %></li>
             </ul>
@@ -76,13 +76,9 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <footer class="footer">
-    <div class="container">
       <p class="text-muted">&copy; 2017 Chamisama Tea</p>
-    </div>
   </footer>
   <!-- END FOOTER -->
-
-
 
 </body>
 </html>

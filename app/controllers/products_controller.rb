@@ -6,11 +6,18 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
+      @title = "Products matching the search term \"#{search_term}\""
       @products = Product.search_by_name(search_term)
     elsif params[:tea_color]
       search_term = params[:tea_color]
+      @title = "All #{search_term.capitalize} Teas"
       @products = Product.search_by_tea_color(search_term)
+    elsif params[:country]
+      search_term = params[:country]
+      @title = "All Teas From #{search_term}"
+      @products = Product.search_by_country(search_term)
     else
+      @title = "All Teas"
       @products = Product.all
     end
   end
@@ -77,6 +84,6 @@ class ProductsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def product_params
-    params.require(:product).permit(:name, :description, :image_url, :colour, :price)
+    params.require(:product).permit(:name, :description, :image_url, :colour, :price, :country)
   end
 end
