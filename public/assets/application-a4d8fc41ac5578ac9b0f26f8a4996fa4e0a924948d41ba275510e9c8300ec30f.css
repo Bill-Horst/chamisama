@@ -1,0 +1,261 @@
+/* line 9, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-index .product-background h1 {
+  color: black;
+  text-align: center;
+}
+/* line 14, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-index .product-background h4 {
+  font-size: 2em;
+}
+/* line 18, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-index .product-background .product-name {
+  font-size: 3em;
+  font-weight: bold;
+}
+/* line 23, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-index .product-background .product-description {
+  font-family: cursive;
+  font-size: 1.3em;
+}
+/* line 28, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-index .product-background .tea-image {
+  height: 100px;
+}
+
+/* line 38, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-show .product-name {
+  color: black;
+  font-size: 3em;
+  font-weight: bold;
+}
+/* line 44, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+#product-show .product-description {
+  font-family: cursive;
+  font-size: 2em;
+}
+
+/* line 51, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+.tea-pics {
+  width: 50%;
+  margin: auto;
+}
+
+/* line 58, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/products.scss */
+.product-form {
+  width: 50%;
+  margin: auto;
+}
+/* line 6, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+body {
+  padding-top: 50px;
+}
+
+/* line 10, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+.navbar {
+  background-color: #f7f7f7;
+  border-bottom-color: black;
+  border-bottom-width: 2px;
+  margin-bottom: 0px;
+}
+
+/* line 17, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#sign-in-or-out-button {
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+/* line 22, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+.nav > li > a {
+  padding: 15px 10px;
+}
+
+/* line 26, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+.navbar-form {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 31, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#q {
+  max-width: 130px;
+}
+
+/* line 44, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#sp-about .sp-about-background .sp-about-content {
+  text-align: center;
+}
+
+/* line 63, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#sp-index .sp-index-background .sp-index-content {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+/* line 68, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#sp-index .sp-index-background .sp-index-content .image-catcup {
+  margin: auto;
+}
+
+/* line 85, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+.three-desc-section h1 {
+  text-align: center;
+}
+/* line 89, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+.three-desc-section p {
+  text-align: justify;
+}
+
+/* line 95, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+.three-desc-pics {
+  margin: auto;
+}
+
+/* line 104, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#thank-you-page {
+  height: 1200px;
+  background-image: url("arashiyama.jpg");
+  background-size: cover;
+}
+/* line 108, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#thank-you-page .thank-you-message-box {
+  width: 90%;
+  background-color: white;
+  margin: auto;
+  position: relative;
+  top: 20%;
+  text-align: center;
+  border-radius: 10px;
+  min-height: 40px;
+  opacity: .9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 120, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#thank-you-page .thank-you-message-box p {
+  font-size: 2em;
+  line-height: 35px;
+}
+
+/* line 132, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#contact-page {
+  background-image: url("arashiyama.jpeg");
+  background-size: cover;
+  min-height: 1200px;
+  padding-top: 50px;
+}
+/* line 139, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#contact-page .contact-background {
+  background-color: white;
+  opacity: .9;
+  padding: 50px;
+  border-radius: 30px;
+  width: 70%;
+  margin: auto;
+}
+/* line 148, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#contact-page .contact-form {
+  width: 90%;
+  margin: auto;
+}
+/* line 153, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#contact-page .company-address {
+  text-align: center;
+}
+/* line 157, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#contact-page .company-map {
+  height: 300px;
+}
+@media screen and (max-width: 920px) {
+  /* line 162, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+  #contact-page .contact-background {
+    width: 95%;
+  }
+}
+/* line 167, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+#contact-page #map {
+  height: 100%;
+}
+
+/* line 177, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 182, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+body {
+  margin-bottom: 60px;
+}
+
+/* line 186, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f7f7f7;
+}
+/* line 193, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/simple_pages.scss */
+.footer p {
+  margin: 20px;
+}
+/* line 9, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/users.scss */
+#authentication-pages {
+  background-image: url("arashiyama.jpeg");
+  background-size: cover;
+  height: 1200px;
+  padding: 50px;
+}
+/* line 16, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/users.scss */
+#authentication-pages .authentication-pages-background {
+  padding: 10px 30px;
+  background-color: white;
+  opacity: .9;
+  width: 40%;
+  margin: auto;
+  border-radius: 10px;
+}
+/* line 25, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/users.scss */
+#authentication-pages .authentication-pages-background .authentication-pages-content {
+  width: 100%;
+}
+/* line 28, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/users.scss */
+#authentication-pages .authentication-pages-background .authentication-pages-content h2 {
+  text-align: center;
+}
+@media screen and (max-width: 1100px) {
+  /* line 37, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/users.scss */
+  #authentication-pages .authentication-pages-background {
+    padding: 10px 30px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 750px) {
+  /* line 44, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/users.scss */
+  #authentication-pages .authentication-pages-background {
+    padding: 10px 30px;
+    width: 80%;
+  }
+}
+
+/* line 58, /Users/billhorst/Desktop/CFRuby/3.6/first/app/assets/stylesheets/users.scss */
+.shared-links-buttons {
+  line-height: 30px;
+  padding-top: 10px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
