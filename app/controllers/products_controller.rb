@@ -16,6 +16,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @comments = @product.comments.order("created_at DESC")
   end
 
   # GET /products/new
@@ -77,6 +78,7 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:name, :description, :image_url, :colour, :price, :country)
   end
+
 
   # Product search based on non-name criteria
   def get_products(search_terms)

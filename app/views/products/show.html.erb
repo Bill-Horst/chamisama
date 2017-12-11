@@ -31,20 +31,9 @@
               Price: $<%= @product.price %>
             </p>
 
-            <% if @product.comments.any? %>
-            <p><span class='glyphicon glyphicon-star-empty'>
-              Highest rating: <%= @product.highest_rating_comment.rating %>
-            </span></p>
+            <%= render 'comments' %>
 
-            <div class='comments'>
-              <% @product.comments.each do |comment| %>
-              <p>
-                "<%= comment.body %>"
-              </p>
-              <% end %>
-            </div>
-            <% end %>
-
+            <%= render 'new_comment' %>
 
           </div>
         </div>
