@@ -1,26 +1,57 @@
+<p id="notice"><%= notice %></p>
 <div id='product-show'>
-  <p id="notice"><%= notice %></p>
+  <div class='product-show-page-background'>
+    <div class='product-show-page-content container'>
 
-  <h1 class='product-name'>
-    <%= @product.name %>
-  </h1>
+      <h1 class='product-name text-center'>
+        <%= @product.name %>
+      </h1>
 
-  <p class='product-description'>
-    <%= @product.description %>
-  </p>
+      <p class='product-description text-center'>
+        <%= @product.description %>
+      </p>
 
-  <p>
-    <%= image_tag(@product.image_url) %>
-  </p>
+      <div class='row'>
 
-  <p>
-    Type: <%= @product.colour %>
-  </p>
+        <div class='col-md-6'>
+          <div class='product-show-image-side'>
+            <div class='thumbnail'>
+              <%= image_tag(@product.image_url, class: 'product-show-page-image') %>
+            </div>
+          </div>
+        </div>
 
-  <p>
-    Price: $<%= @product.price %>
-  </p>
+        <div class='col-md-6'>
+          <div class='product-show-info-side'>
+            <p>
+              Type: <%= @product.colour %>
+            </p>
 
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
+            <p>
+              Price: $<%= @product.price %>
+            </p>
+
+            <% if @product.comments.any? %>
+            <p><span class='glyphicon glyphicon-star-empty'>
+              Highest rating: <%= @product.highest_rating_comment.rating %>
+            </span></p>
+
+            <div class='comments'>
+              <% @product.comments.each do |comment| %>
+              <p>
+                "<%= comment.body %>"
+              </p>
+              <% end %>
+            </div>
+            <% end %>
+
+
+          </div>
+        </div>
+
+        <%= link_to 'Edit', edit_product_path(@product) %> |
+        <%= link_to 'Back', products_path %>
+      </div>
+    </div>
+  </div>
 </div>

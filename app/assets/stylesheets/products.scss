@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// PRODUCT INDEX PAGE
+
 #product-index {
 
   .product-background {
@@ -41,6 +43,11 @@
 
 }
 
+// END PRODUCT INDEX PAGE
+
+
+// PRODUCT SHOW PAGE
+
 #product-show {
 
   .product-name {
@@ -54,12 +61,48 @@
     font-size: 2em;
   }
 
+  background-image: url('arashiyama.jpeg');
+  background-size: cover;
+  min-height: 1200px;
+  padding-top: 50px;
+
+  .product-show-page-background {
+    background-color: white;
+    opacity: .9;
+    padding: 50px;
+    border-radius: 30px;
+    width: 90%;
+    margin: auto;
+
+
+    .product-show-image-side {
+      margin: auto;
+
+    }
+
+    .product-show-page-image {
+      height: 300px;
+    }
+
+    .product-show-info-side {
+      p {
+        font-size: 2em;
+      }
+
+      .comments {
+        p {
+          font-family: cursive;
+        }
+      }
+
+    }
+
+  }
+
 }
 
-.tea-pics {
-  width: 50%;
-  margin: auto;
-}
+// END PRODUCT SHOW PAGE
+
 
 // PRODUCT CREATE / EDIT FORM
 
