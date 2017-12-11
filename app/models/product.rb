@@ -1,5 +1,7 @@
 class Product < ApplicationRecord
 
+  belongs_to :order
+
   def self.search_by_name(search_term)
     if Rails.env.development?
       Product.where("name LIKE ?", "%#{search_term}%")
@@ -8,12 +10,8 @@ class Product < ApplicationRecord
     end
   end
 
-  def self.search_by_tea_color(color)
-    Product.where("colour = ?", "#{color}")
-  end
-
-  def self.search_by_country(country)
-    Product.where("country = ?", "#{country}")
+  def self.search(color, country)
+    Product.where("colour = ? OR country = ?", color, country)
   end
 
 end

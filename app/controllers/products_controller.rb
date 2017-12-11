@@ -4,22 +4,13 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    if params[:q]
-      search_term = params[:q]
-      @title = "Products matching the search term \"#{search_term}\""
-      @products = Product.search_by_name(search_term)
-    elsif params[:tea_color]
-      search_term = params[:tea_color]
-      @title = "All #{search_term.capitalize} Teas"
-      @products = Product.search_by_tea_color(search_term)
-    elsif params[:country]
-      search_term = params[:country]
-      @title = "All Teas From #{search_term}"
-      @products = Product.search_by_country(search_term)
-    else
-      @title = "All Products"
-      @products = Product.all
-    end
+    search_terms = get_search_terms
+    # If search_terms[0] exists, user searched by name, so return products by name, otherwise, search by other criteria:
+    @products = search_terms[0] ?
+    Product.search_by_name(search_terms[0]) :
+    get_products(search_terms)
+    @title = get_title
+
   end
 
   # GET /products/1
@@ -86,4 +77,36 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:name, :description, :image_url, :colour, :price, :country)
   end
+
+  # Product search based on non-name criteria
+  def get_products(search_terms)
+    if search_terms.any?
+      # User did not search by name so remove first value from search_terms array
+      search_terms.shift
+      Product.search(search_terms[0],search_terms[1])
+    else
+      # If no search criteria, return all products
+      Product.all
+    end
+  end
+
+  # Get the title for the type of search
+  def get_title
+    if params[:q]
+      "Products matching a search for \"#{params[:q]}\""
+    elsif params[:tea_color]
+      "All #{params[:tea_color].capitalize} Teas"
+    elsif params[:country]
+      "All Teas From #{params[:country]}"
+    else
+      "All Products"
+    end
+  end
+
+  def get_search_terms
+    [].push(params[:q])
+    .push(params[:tea_color])
+    .push(params[:country])
+  end
+
 end

@@ -5,8 +5,8 @@
       <% if product.colour!= '' %>
       <span class='tea-type-color text-muted'>(<%= product.colour.upcase %>)</span>
       <% end %>
-      <hr />
     </div>
+    <hr />
     <%= image_tag(product.image_url, class: 'img-responsive tea-image') %>
     <div class='caption'>
       <h4 class='product-description'>"<%= product.description %>"</h4>
