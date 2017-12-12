@@ -5,9 +5,11 @@ class Ability
     user ||= User.new
     can :manage, User, id: user.id
     can :read, Order, id: user.id
+
+    if user.admin?
+      can :delete
+    end
   end
-
-
 
 end
 
