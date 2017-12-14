@@ -1,5 +1,6 @@
 <div class='col-md-6'>
-  <div class='thumbnail'>
+  <%= link_to product, :class => 'product-index-product' do %>
+  <div class='thumbnail product-thumbnail'>
     <div class='tea-title'>
       <h2><%= product.name %></h2>
       <% if product.colour!= '' %>
@@ -16,9 +17,22 @@
       <div class='row'>
         <div class='col-sm-6'>
 
-          <%= link_to 'Show', product %>
+          <% if can? :manage, product %>
           <%= link_to 'Edit', edit_product_path(product) %>
           <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+          <% elsif product.average_rating != 0 %>
+          <p class='average-rating-indicator'>Average Rating: <div class="rated" data-score="<%= product.average_rating %>"></div> </p>
+          <span class='text-muted'><%= product.comments.count %></span>
+          <% if product.comments.count > 1 %>
+          <span class='text-muted'> reviews</span>
+          <% else %>
+          <span class='text-muted'> review</span>
+          <% end %>
+
+          <% else %>
+          <p>No rating yet</p>
+          <% end %>
 
         </div>
         <div class='col-sm-6'>
@@ -27,4 +41,5 @@
       </div>
     </div>
   </div>
+  <% end %>
 </div>

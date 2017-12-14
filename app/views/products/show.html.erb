@@ -7,10 +7,6 @@
         <%= @product.name %>
       </h1>
 
-      <p class='product-description text-center'>
-        <%= @product.description %>
-      </p>
-
       <div class='row'>
 
         <div class='col-md-6'>
@@ -23,6 +19,11 @@
 
         <div class='col-md-6'>
           <div class='product-show-info-side'>
+
+            <p class='product-description'>
+              <%= @product.description %>
+            </p>
+
             <p>
               Type: <%= @product.colour %>
             </p>
@@ -31,17 +32,24 @@
               Price: $<%= @product.price %>
             </p>
 
+            <% if @product.average_rating != 0 %>
             <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-
-            <%= render 'comments' %>
-
-            <%= render 'new_comment' %>
+            <% else %>
+            <p>No rating yet. <%= link_to 'Sign in', new_user_session_path %> to be the first.</p>
+            <% end %>
 
           </div>
         </div>
+      </div>
+      <div class='comment-section'>
 
-        <%= link_to 'Edit', edit_product_path(@product) %> |
-        <%= link_to 'Back', products_path %>
+        <%= render 'new_comment' %>
+        <%= render 'comments' %>
+
+        <div class='text-center'>
+          <%= will_paginate @comments %>
+        </div>
+
       </div>
     </div>
   </div>
