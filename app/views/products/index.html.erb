@@ -1,5 +1,8 @@
 <div id='product-index'>
   <div class='product-background'>
+    <% if can? :manage, Product %>
+    <%= link_to 'Click to Add a New Product', new_product_path, class: 'btn btn-success' %>
+    <% end %>
     <p id="notice"><%= notice %></p>
 
     <h1><%= @title %></h1>
@@ -15,6 +18,9 @@
 
     <br>
 
-    <%= link_to 'New Product', new_product_path %>
+    <% if can? :manage, Product %>
+    <%= link_to 'Click to Add a New Product', new_product_path, class: 'btn btn-success' %>
+    <% end %>
+
   </div>
 </div>

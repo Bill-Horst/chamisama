@@ -83,8 +83,11 @@
   <%= yield %>
 
   <!-- FOOTER -->
+  <% if notice %>
   <p class="notice"><%= notice %></p>
+  <% elsif alert %>
   <p class="alert"><%= alert %></p>
+  <% end %>
   <footer class="footer">
     <p class="text-muted">&copy; 2017 Chamisama Tea</p>
   </footer>
