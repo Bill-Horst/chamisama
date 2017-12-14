@@ -6,11 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Product.create(name: "Houjicha", description: "Brown tea. Smells great. Good for stomach aches.", colour: "green", price: 34.99, image_url: 'hjcha.jpeg')
-# Product.create(name: "Genmaicha", description: "Nice green tea with tasty yellow things in it.", colour: "green", price: 39.99, image_url: 'gmcha.jpeg')
-# Product.create(name: "Oolong Tea", description: "A dark Chinese tea. Healthy for you.", colour: "black", price: 64.99, image_url: 'ooloncha.jpeg')
-# Product.create(name: "Gyokuro Powder", description: "Super high caffeine tea. Don't drink at night.", colour: "green", price: 69.99, image_url: 'gyokuropowder.jpeg')
+Comment.delete_all
 Product.delete_all
+
 Product.create(
   [
     {
@@ -93,5 +91,82 @@ Product.create(
       country: '',
       price: '39.99'
     }
+  ]
+)
+
+Comment.create(
+  [
+    {
+      body: 'Ok, not bad',
+      rating: 3,
+      user_id: User.order("RANDOM()").first.id,
+      product_id: Product.order("RANDOM()").first.id
+    },
+    {
+      body: 'Tastes great',
+      rating: 5,
+      user_id: User.order("RANDOM()").first.id,
+      product_id: Product.order("RANDOM()").first.id
+    },
+    {
+      body: 'Nasty!',
+      rating: 1,
+      user_id: User.order("RANDOM()").first.id,
+      product_id: Product.order("RANDOM()").first.id
+    },
+    {
+      body: 'Superb flavour',
+      rating: 5,
+      user_id: User.order("RANDOM()").first.id,
+      product_id: Product.order("RANDOM()").first.id
+    },
+    {
+      body: 'Pretty good!',
+      rating: 4,
+      user_id: User.order("RANDOM()").first.id,
+      product_id: Product.order("RANDOM()").first.id
+    },
+    {
+      body: 'Terrible!',
+      rating: 1,
+      user_id: User.order("RANDOM()").first.id,
+      product_id: Product.order("RANDOM()").first.id
+    },
+    {
+      body: 'Ok, not bad',
+      rating: 3,
+      user_id: User.order("RANDOM()").first.id,
+      product_id: Product.order("RANDOM()").first.id
+    },
+    {
+      body: 'Not great',
+      rating: 2,
+      user_id: User.order("RANDOM()").first.id,
+      product_id: Product.order("RANDOM()").first.id
+    },
+    {
+      body: 'Ok',
+      rating: 3,
+      user_id: User.order("RANDOM()").first.id,
+      product_id: Product.order("RANDOM()").first.id
+    },
+    {
+      body: 'Good taste',
+      rating: 4,
+      user_id: User.order("RANDOM()").first.id,
+      product_id: Product.order("RANDOM()").first.id
+    },
+    {
+      body: 'So so',
+      rating: 3,
+      user_id: User.order("RANDOM()").first.id,
+      product_id: Product.order("RANDOM()").first.id
+    },
+    {
+      body: 'Nasty taste, but healthy',
+      rating: 3,
+      user_id: User.order("RANDOM()").first.id,
+      product_id: Product.order("RANDOM()").first.id
+    },
   ]
 )

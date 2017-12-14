@@ -14,4 +14,6 @@
   <%= f.submit "Submit", class: 'btn btn-default' %>
 </p>
 <% end %>
+<% else %>
+<p style='text-decoration:underline; color:red;'>You're not signed in. <%= link_to 'Sign in', new_user_session_path %> to leave a review<p>
 <% end %>
