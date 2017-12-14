@@ -103,19 +103,19 @@ Comment.create(
       product_id: Product.order("RANDOM()").first.id
     },
     {
-      body: 'Tastes great',
+      body: 'Great product',
       rating: 5,
       user_id: User.order("RANDOM()").first.id,
       product_id: Product.order("RANDOM()").first.id
     },
     {
-      body: 'Nasty!',
+      body: 'NO!',
       rating: 1,
       user_id: User.order("RANDOM()").first.id,
       product_id: Product.order("RANDOM()").first.id
     },
     {
-      body: 'Superb flavour',
+      body: 'Superb quality',
       rating: 5,
       user_id: User.order("RANDOM()").first.id,
       product_id: Product.order("RANDOM()").first.id
@@ -151,7 +151,7 @@ Comment.create(
       product_id: Product.order("RANDOM()").first.id
     },
     {
-      body: 'Good taste',
+      body: 'Good thing!',
       rating: 4,
       user_id: User.order("RANDOM()").first.id,
       product_id: Product.order("RANDOM()").first.id
@@ -163,7 +163,7 @@ Comment.create(
       product_id: Product.order("RANDOM()").first.id
     },
     {
-      body: 'Nasty taste, but healthy',
+      body: 'I\'m glad it\'s healthy',
       rating: 3,
       user_id: User.order("RANDOM()").first.id,
       product_id: Product.order("RANDOM()").first.id
