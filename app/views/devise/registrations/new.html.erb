@@ -14,7 +14,8 @@
       <div class="field form-group">
         <%= f.label :first_name %><br />
         <%= f.text_field :first_name, autofocus: true, class: 'form-control' %>
-      </div>
+      </div><!-- currently not working... trying to figure out how to
+        white list 'first_name' on Devise controller -->
 
       <div class="field form-group">
         <%= f.label :password %>
@@ -43,6 +44,7 @@
           <% end -%>
         </div>
       </div>
+
     </div>
   </div>
 </div>
