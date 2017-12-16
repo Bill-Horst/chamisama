@@ -19,7 +19,7 @@ class Product < ApplicationRecord
     if Rails.env.development?
       Product.where("colour LIKE ? OR country LIKE ?", color, country)
       elsif Rails.env.production?
-      Product.where("colour ilike ? OR country ilike = ?", color, country)
+      Product.where("colour ilike ? OR country ilike ?", color, country)
     end
   end
 
