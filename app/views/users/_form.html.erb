@@ -1,27 +1,37 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div id='authentication-pages'>
+  <div class='authentication-pages-background'>
+    <div class='authentication-pages-content'>
 
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <h2>Update</h2>
+      <%= form_with(model: user, local: true) do |form| %>
+      <% if user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+          <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
       <% end %>
-      </ul>
+
+      <div class="field form-group">
+        <%= form.label :first_name %>
+        <%= form.text_field :first_name, autofocus: true, id: :user_first_name, class: 'form-control' %>
+      </div>
+
+      <div class="field form-group">
+        <%= form.label :last_name %>
+        <%= form.text_field :last_name, id: :user_last_name, class: 'form-control' %>
+      </div>
+
+      <br />
+
+      <div class="actions">
+        <%= form.submit "Update", class: 'btn btn-primary btn-block' %>
+      </div>
+      <% end %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :user_first_name %>
   </div>
-
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :user_last_name %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
