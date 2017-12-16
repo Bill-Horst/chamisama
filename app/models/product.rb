@@ -1,6 +1,8 @@
 class Product < ApplicationRecord
 
   validates :name, presence: true
+  validates :image_url, presence: true
+  validates :price, presence: true, numericality: true
 
   has_many :order
   has_many :comments
@@ -14,7 +16,11 @@ class Product < ApplicationRecord
   end
 
   def self.search(color, country)
-    Product.where("colour = ? OR country = ?", color, country)
+    if Rails.env.development?
+      Product.where("colour LIKE ? OR country LIKE ?", color, country)
+      elsif Rails.env.production?
+      Product.where("colour ilike ? OR country ilike = ?", color, country)
+    end
   end
 
   def highest_rating_comment

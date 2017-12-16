@@ -38,6 +38,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
+    @product.image_url = 'gmcha.jpg' #image_url disabled for demonstration purposes (also changed in _form.html.erb)
 
     respond_to do |format|
       if @product.save
