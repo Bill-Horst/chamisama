@@ -47,8 +47,15 @@
     }
   }
 
-}
+  .field {
+    margin-top: 30px;
+  }
 
+  .remember-me-checkbox > label {
+    font-weight: normal;
+  }
+
+}
 
 
 // END AUTHENTICATION PAGES
@@ -58,6 +65,10 @@
 .shared-links-buttons {
   line-height: 30px;
   padding-top: 10px;
+}
+.shared-links-buttons div {
+  display: inline-block;
+  margin-left: 15%;
 }
 
 

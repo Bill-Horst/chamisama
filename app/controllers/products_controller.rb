@@ -9,7 +9,12 @@ class ProductsController < ApplicationController
     @products = search_terms[0] ?
     Product.search_by_name(search_terms[0]) :
     get_products(search_terms)
-    @title = get_title
+
+    if @products.length == 0
+      @title = "No matches for \"#{params[:q]}\""
+    else
+      @title = get_title
+    end
 
   end
 
@@ -95,7 +100,9 @@ class ProductsController < ApplicationController
 
   # Get the title for the type of search
   def get_title
-    if params[:q]
+    if params[:q] == ""
+      "No search criteria entered. Here's everything!"
+    elsif params[:q]
       "Products matching a search for \"#{params[:q]}\""
     elsif params[:tea_color]
       "All #{params[:tea_color].capitalize} Teas"

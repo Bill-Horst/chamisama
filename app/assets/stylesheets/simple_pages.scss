@@ -200,7 +200,7 @@ html {
 }
 
 body {
-  margin-bottom: 60px; // *!*!keep same as height of .footer*!*!
+  margin-bottom: 60px !important; // *!*!keep same as height of .footer*!*!
 }
 
 .footer {

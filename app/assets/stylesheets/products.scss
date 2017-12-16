@@ -6,11 +6,17 @@
 
 #product-index {
 
+  .col-md-4.col-sm-6 {
+    padding-bottom: 8px;
+  }
+
   .product-background {
 
     h1 {
       color: black;
       text-align: center;
+      margin-top: 50px;
+      margin-bottom: 60px;
     }
 
     h4 {
@@ -25,6 +31,7 @@
     .product-description {
       font-family: cursive;
       font-size: 1.3em;
+      line-height: 1.2em;
     }
 
     .tea-image {
@@ -47,12 +54,28 @@
     color: black;
   }
   .product-thumbnail {
-    transition: all 500ms;
+    transition: all 250ms;
     opacity: .85;
+    box-shadow: 1px 1px 1px black;
   }
   .product-thumbnail:hover {
-    transform: translateY(-3px);
+    transform: translate(-1.5px, -3px);
     opacity: 1;
+    box-shadow: 4px 4px 1px black;
+  }
+
+  .caption {
+    min-height: 80px;
+  }
+
+  hr {
+    margin-bottom: 5px;
+  }
+
+  @media screen and (max-width: 767px){
+    .thumbnail-product-information {
+      min-height: 110px;
+    }
   }
 
   .average-rating-indicator {
@@ -61,6 +84,8 @@
 
   .price-div {
     height: 40px;
+    margin-top: 10px;
+    font-size: 1.5em;
   }
 
 }
