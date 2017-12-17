@@ -5,7 +5,7 @@ class Product < ApplicationRecord
   validates :price, presence: true, numericality: true
 
   has_many :order
-  has_many :comments
+  has_many :comments, dependent: :destroy
 
   def self.search_by_name(search_term)
     if Rails.env.development?
