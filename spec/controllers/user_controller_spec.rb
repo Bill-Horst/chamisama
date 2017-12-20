@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe UsersController, type: :controller do
-  let(:user) { User.create!(email: "test@test.com", password: "test11") }
-  let(:user2) { User.create!(email: "test2@test.com", password: "test112") }
+  let(:user) { FactoryBot.create(:user) }
+  let(:user2) { FactoryBot.create(:user) }
 
 # -------------------------------------- GET INDEX
     describe 'GET #index' do
