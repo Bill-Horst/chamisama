@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Product do
 
   context "when the product has comments" do
-    let(:product) { Product.create!(name: "race bike", image_url: "houjicha.jpg", price: 35) }
+    let(:product) { FactoryBot.create(:product) }
     let(:user) { FactoryBot.create(:user) }
 
     before do

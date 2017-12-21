@@ -3,8 +3,8 @@ require 'rails_helper'
 describe Comment do
 
   context "comment created" do
-    let(:product) { Product.create!(name: "race bike", image_url: "houjicha.jpg", price: 35) }
-    let(:user) { User.create!(email: "test@test.com", password: "test11") }
+    let(:product) { FactoryBot.create(:product) }
+    let(:user) { FactoryBot.create(:user) }
 
     it "contains body, rating, user, and product" do
       expect(Comment.new(body: "body body body", rating: 3, user: user, product: product)).to be_valid
