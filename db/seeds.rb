@@ -17,7 +17,7 @@ Product.create(
       image_url: 'gmcha.jpg',
       colour: 'green',
       country: 'Japan',
-      price: '45.99'
+      price_in_pennies: '4599'
     },
     {
       name: 'Oolong Tea',
@@ -25,7 +25,7 @@ Product.create(
       image_url: 'ooloncha.jpg',
       colour: 'black',
       country: 'China',
-      price: '19.99'
+      price_in_pennies: '1999'
     },
     {
       name: 'Houjicha',
@@ -33,7 +33,7 @@ Product.create(
       image_url: 'hjcha.jpg',
       colour: 'green',
       country: 'Japan',
-      price: '21.99'
+      price_in_pennies: '2199'
     },
     {
       name: 'Brewer',
@@ -41,7 +41,7 @@ Product.create(
       image_url: 'brewer.jpg',
       colour: '',
       country: '',
-      price: '69.99'
+      price_in_pennies: '6999'
     },
     {
       name: 'Imperial Dragon',
@@ -49,7 +49,7 @@ Product.create(
       image_url: 'imp_drag.jpg',
       colour: 'green',
       country: 'China',
-      price: '69.99'
+      price_in_pennies: '6999'
     },
     {
       name: 'Gyokuro Powder',
@@ -57,7 +57,7 @@ Product.create(
       image_url: 'gyokuropowder.jpg',
       colour: 'green',
       country: 'Japan',
-      price: '99.99'
+      price_in_pennies: '9999'
     },
     {
       name: 'Shizuoka Black Tea',
@@ -65,7 +65,7 @@ Product.create(
       image_url: 'shizu_black.jpg',
       colour: 'black',
       country: 'Japan',
-      price: '34.99'
+      price_in_pennies: '3499'
     },
     {
       name: 'Sanpincha',
@@ -73,7 +73,7 @@ Product.create(
       image_url: 'sanpin.jpg',
       colour: 'green',
       country: 'Japan',
-      price: '24.99'
+      price_in_pennies: '2499'
     },
     {
       name: 'Dianhong',
@@ -81,7 +81,7 @@ Product.create(
       image_url: 'dianhong.jpg',
       colour: 'black',
       country: 'China',
-      price: '39.99'
+      price_in_pennies: '3999'
     },
     {
       name: 'Teacup Set',
@@ -89,7 +89,7 @@ Product.create(
       image_url: 'teacups.jpg',
       colour: '',
       country: '',
-      price: '39.99'
+      price_in_pennies: '3999'
     }
   ]
 )

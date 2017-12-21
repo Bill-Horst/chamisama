@@ -31,17 +31,18 @@
             </p>
 
             <p>
-              Price: $<%= @product.price %>
+              Price: $<%= "%.2f" % Rational(@product.price_in_pennies.to_i,100) %>
             </p>
 
             <%= form_with(url: '/payments/create') do |form| %>
+            <%= hidden_field_tag(:product_id, @product.id) %>
             <%= render partial: "shared/stripe_checkout_button" %>
             <% end %>
-            
+
             <% if @product.average_rating != 0 %>
             <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
             <% else %>
-            <p>No rating yet. <%= link_to 'Sign in', new_user_session_path %> to be the first.</p>
+            <p>No ratings yet.</p>
             <% end %>
 
           </div>

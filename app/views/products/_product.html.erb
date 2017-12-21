@@ -36,7 +36,7 @@
 
         </div>
         <div class='col-sm-6'>
-          <p class='price-div'>$<%= product.price %></p>
+          <p class='price-div'>$<%= "%.2f" % Rational(product.price_in_pennies.to_i,100) %></p>
         </div>
       </div>
     </div>

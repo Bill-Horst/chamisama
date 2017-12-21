@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171212022706) do
+ActiveRecord::Schema.define(version: 20171221045247) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20171212022706) do
     t.string "colour"
     t.decimal "price"
     t.string "country"
+    t.integer "price_in_pennies"
   end
 
   create_table "users", force: :cascade do |t|
