@@ -18,7 +18,7 @@ class PaymentsController < ApplicationController
       flash[:error] = "Unfortuntaely, there was an error processing the payment: #{err[:message]}"
     end
 
-    UserMailer.payment_processed(@product.price_in_pennies, @product.name).deliver_now
+    UserMailer.payment_processed(@product.price_in_pennies, @product.name, @user.email).deliver_now
 
     redirect_to product_path(@product)
 
