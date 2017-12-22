@@ -9,6 +9,7 @@ class Ability
     if user.admin?
       can :delete
       can :manage, Product
+      can :read, Order
     end
   end
 

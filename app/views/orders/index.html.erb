@@ -1,1 +1,5 @@
 <h1>Orders index page</h1>
+<% @orders.each do |order| %>
+  <p><%= order.id %></p>
+  <p><%= order.total %></p>
+<% end %>

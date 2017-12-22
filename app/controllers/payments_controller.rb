@@ -12,14 +12,18 @@ class PaymentsController < ApplicationController
         source: token,
         description: params[:stripeEmail]
       )
+
+      if charge.paid
+        Order.create(product_id: @product.id, user_id: @user.id, total: @product.price_in_pennies)
+        UserMailer.payment_processed(@product.price_in_pennies, @product.name, @user.email).deliver_now
+      end
+
     rescue Stripe::CardError => e
       body = e.json_body
       err = body[:error]
       flash[:error] = "Unfortuntaely, there was an error processing the payment: #{err[:message]}"
     end
-
-    UserMailer.payment_processed(@product.price_in_pennies, @product.name, @user.email).deliver_now
-
+    
     redirect_to product_path(@product)
 
   end
