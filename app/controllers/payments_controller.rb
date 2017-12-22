@@ -13,8 +13,12 @@ class PaymentsController < ApplicationController
         description: params[:stripeEmail]
       )
     rescue Stripe::CardError => e
-      # The card has been declined
+      body = e.json_body
+      err = body[:error]
+      flash[:error] = "Unfortuntaely, there was an error processing the payment: #{err[:message]}"
     end
+
+    UserMailer.payment_processed(@product.price_in_pennies, @product.name).deliver_now
 
     redirect_to product_path(@product)
 
