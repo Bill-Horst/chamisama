@@ -34,9 +34,13 @@
               Price: $<%= "%.2f" % Rational(@product.price_in_pennies.to_i,100) %>
             </p>
 
+            <% if user_signed_in? %>
             <%= form_with(url: '/payments/create') do |form| %>
             <%= hidden_field_tag(:product_id, @product.id) %>
             <%= render partial: "shared/stripe_checkout_button" %>
+            <% end %>
+            <% else %>
+            <p><%= link_to('Sign in', new_user_session_path) %> or <%= link_to('sign up', new_user_registration_path) %> to purchase.</p>
             <% end %>
 
             <% if @product.average_rating != 0 %>
