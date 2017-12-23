@@ -1,1 +1,16 @@
-<h1>Orders show page</h1>
+<div id='order-show'>
+  <div class='order-show-page-background'>
+    <div class='order-show-page-content container'>
+
+      <h1 class='text-center'>
+        <% if notice %>
+        <p id="notice"><%= notice %></p>
+        <% end %>
+        <p>Order number: <%= @order.id %></p>
+        <p><%= @product.name %></p>
+        <%= image_tag(@product.image_url, class: 'order-show-page-image') %>
+      </h1>
+
+    </div>
+  </div>
+</div>

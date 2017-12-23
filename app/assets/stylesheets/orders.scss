@@ -1,0 +1,25 @@
+#order-show {
+
+  background-image: url('arashiyama.jpeg');
+  background-size: cover;
+  min-height: 1200px;
+  padding-top: 50px;
+
+  .order-show-page-background {
+    background-color: white;
+    opacity: .9;
+    padding: 50px;
+    border-radius: 30px;
+    width: 90%;
+    margin: auto;
+
+    .order-show-page-content {
+      width: 100%;
+    }
+  }
+
+  .product-show-page-image {
+    height: 300px;
+  }
+  
+}

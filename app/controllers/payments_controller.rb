@@ -14,8 +14,19 @@ class PaymentsController < ApplicationController
       )
 
       if charge.paid
-        Order.create(product_id: @product.id, user_id: @user.id, total: @product.price_in_pennies)
+        @order = Order.new(product_id: @product.id, user_id: @user.id, total: @product.price_in_pennies)
         UserMailer.payment_processed(@product.price_in_pennies, @product.name, @user.email).deliver_now
+
+        respond_to do |format|
+          if @order.save
+            format.html { redirect_to @order, notice: 'Thanks! Your order was received. It will arrive shortly.' }
+            format.json { render :show, status: :created, location: @order }
+          else
+            format.html { render :new }
+            format.json { render json: @order.errors, status: :unprocessable_entity }
+          end
+        end
+
       end
 
     rescue Stripe::CardError => e
@@ -23,8 +34,6 @@ class PaymentsController < ApplicationController
       err = body[:error]
       flash[:error] = "Unfortuntaely, there was an error processing the payment: #{err[:message]}"
     end
-    
-    redirect_to product_path(@product)
 
   end
 
