@@ -8,12 +8,10 @@
       <% end %>
     </div>
     <hr />
-    <% cache product do %>
     <%= image_tag(product.image_url, class: 'img-responsive tea-image') %>
     <div class='caption'>
       <h4 class='product-description'>"<%= product.description %>"</h4>
     </div>
-    <% end %>
     <hr />
     <div class='thumbnail-product-information'>
       <div class='row'>

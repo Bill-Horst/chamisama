@@ -12,9 +12,7 @@
         <!-- <% @products.each do |product| %>
         <%= render partial: "product", locals: {product: product} %>
         <% end %> -->
-        <% cache (cache_key_for_products) do %>
         <%= render @products %>
-        <% end %>
       </div>
     </div>
 
