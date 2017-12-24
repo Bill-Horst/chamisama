@@ -34,6 +34,11 @@
               Price: $<%= "%.2f" % Rational(@product.price_in_pennies.to_i,100) %>
             </p>
 
+            <p>
+              <% $redis.incr("#{@product.name}Views") %>
+              Product views: <%= $redis.get("#{@product.name}Views") %>
+            </p>
+
             <% if user_signed_in? %>
             <%= form_with(url: '/payments/create') do |form| %>
             <%= hidden_field_tag(:product_id, @product.id) %>
