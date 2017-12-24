@@ -29,5 +29,7 @@ module First
     config.generators.system_tests = nil
 
     config.serve_static_assets = true
+
+    config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
   end
 end
