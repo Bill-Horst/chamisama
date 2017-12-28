@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe SimplePagesController, type: :controller do
+
   # -------------------------------------- GET INDEX
   context 'GET #index' do
 
@@ -12,7 +13,6 @@ describe SimplePagesController, type: :controller do
   end # END GET INDEX
 
   # --------------------------------------GET LANDING PAGE
-
   context 'GET #landing_page' do
 
     it 'renders the landing page' do
@@ -21,4 +21,5 @@ describe SimplePagesController, type: :controller do
       expect(response).to render_template('landing_page')
     end
   end # END GET LANDING PAGE
+  
 end # END DESCRIBE SIMPLE PAGES CONTROLLER

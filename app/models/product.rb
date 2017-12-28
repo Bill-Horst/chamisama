@@ -2,7 +2,7 @@ class Product < ApplicationRecord
 
   validates :name, presence: true
   validates :image_url, presence: true
-  validates :price_in_pennies, presence: true, numericality: true
+  validates :price_in_pennies, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   has_many :order
   has_many :comments, dependent: :destroy
