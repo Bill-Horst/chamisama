@@ -30,21 +30,21 @@ describe Product do
   end
 
   context "product created" do
-    it "is valid only if image_url, name, price are present" do
-      expect(Product.new(image_url: "houjicha.jpg", name: "jaja", price: "3")).to be_valid
+    it "is valid only if image_url, name, price_in_pennies are present" do
+      expect(Product.new(image_url: "houjicha.jpg", name: "jaja", price_in_pennies: "3")).to be_valid
       expect(Product.new(image_url: "houjicha.jpg", name: "jaja")).not_to be_valid
-      expect(Product.new(image_url: "houjicha.jpg", price: "3")).not_to be_valid
-      expect(Product.new(name: "jaja", price: "3")).not_to be_valid
+      expect(Product.new(image_url: "houjicha.jpg", price_in_pennies: "3")).not_to be_valid
+      expect(Product.new(name: "jaja", price_in_pennies: "3")).not_to be_valid
     end
   end
 
-  context "when the product is created with a price" do
-    it "is not valid unless price is a number" do
-      expect(Product.new(name: "tea", image_url: "houjicha.jpg", price: "cat")).not_to be_valid
-      expect(Product.new(name: "tea", image_url: "houjicha.jpg", price: true)).not_to be_valid
-      expect(Product.new(name: "tea", image_url: "houjicha.jpg", price: "")).not_to be_valid
-      expect(Product.new(name: "tea", image_url: "houjicha.jpg", price: "8")).to be_valid
-      expect(Product.new(name: "tea", image_url: "houjicha.jpg", price: "8.33")).to be_valid
+  context "when the product is created with a price_in_pennies" do
+    it "is not valid unless price_in_pennies is a number" do
+      expect(Product.new(name: "tea", image_url: "houjicha.jpg", price_in_pennies: "cat")).not_to be_valid
+      expect(Product.new(name: "tea", image_url: "houjicha.jpg", price_in_pennies: true)).not_to be_valid
+      expect(Product.new(name: "tea", image_url: "houjicha.jpg", price_in_pennies: "")).not_to be_valid
+      expect(Product.new(name: "tea", image_url: "houjicha.jpg", price_in_pennies: "8")).to be_valid
+      expect(Product.new(name: "tea", image_url: "houjicha.jpg", price_in_pennies: "8.33")).to be_valid
     end
   end
 

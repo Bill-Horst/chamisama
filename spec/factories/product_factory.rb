@@ -11,7 +11,7 @@ FactoryBot.define do
     description "Good tea for waking up"
     image_url "http://test"
     colour "green"
-    price "5.99"
+    price_in_pennies "5.99"
   end
-  
+
 end
