@@ -1,4 +1,4 @@
 $("#new_comment").html("Thanks for reviewing this!");
-$('.product-reviews').prepend("<%= j render @comment %>");
+// $('.product-reviews').prepend("<%= j render @comment %>");
 $('#average-rating').attr('data-score', "<%= @product.average_rating %>");
 refreshRating();
