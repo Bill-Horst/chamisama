@@ -11,7 +11,6 @@ body { // To offset body for fixed navbar
   background-color: #f7f7f7;
   border-bottom-color: black;
   border-bottom-width: 2px;
-  margin-bottom: 0px;
 }
 
 #sign-in-or-out-button {
@@ -53,25 +52,6 @@ body { // To offset body for fixed navbar
 }
 
 // END ALERTS
-
-
-// ABOUT SECTION
-
-#sp-about {
-
-  .sp-about-background {
-
-    .sp-about-content {
-
-      text-align: center;
-
-    }
-
-  }
-
-}
-
-// END ABOUT SECTION
 
 
 // INDEX
@@ -151,6 +131,10 @@ body { // To offset body for fixed navbar
 
 #contact-page {
 
+  h1 {
+    margin-bottom: 25px;
+  }
+
   background-image: url('arashiyama.jpeg');
   background-size: cover;
   min-height: 1200px;
@@ -159,7 +143,7 @@ body { // To offset body for fixed navbar
   .contact-background {
     background-color: white;
     opacity: .9;
-    padding: 50px;
+    padding: 20px 40px 30px 40px;
     border-radius: 30px;
     width: 70%;
     margin: auto;
@@ -191,6 +175,41 @@ body { // To offset body for fixed navbar
 }
 
 // END CONTACT PAGE
+
+
+// ABOUT SECTION
+
+#sp-about {
+
+  h1 {
+    margin-bottom: 25px;
+  }
+
+  background-image: url('arashiyama.jpeg');
+  background-size: cover;
+  min-height: 1200px;
+  padding-top: 50px;
+
+  .sp-about-background {
+
+    background-color: white;
+    opacity: .9;
+    padding: 20px 40px 30px 40px;
+    border-radius: 30px;
+    width: 70%;
+    margin: auto;
+
+    .sp-about-content {
+
+      text-align: center;
+
+    }
+
+  }
+
+}
+
+// END ABOUT SECTION
 
 
 // FOOTER

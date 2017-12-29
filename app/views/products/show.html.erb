@@ -6,17 +6,29 @@
         <%= @product.name %>
       </h1>
 
+      <span>
+        <% $redis.incr("#{@product.name}Views") %>
+        Product views: <%= $redis.get("#{@product.name}Views") %>
+      </span>
+
       <div data-product-id='<%= @product.id %>' class='row'>
 
         <div class='col-md-6'>
           <div class='product-show-image-side'>
             <div class='thumbnail'>
               <%= image_tag(@product.image_url, class: 'product-show-page-image img-zoom', data_zoom_image: @product.image_url) %>
+              <br />
+              <% if @product.average_rating != 0 %>
+              <p class='text-center'>Average Rating: <span id='average-rating' class="rated text-center" data-score="<%= @product.average_rating %>"></span> </p>
+              <% else %>
+              <p class='text-center'>No ratings yet.</p>
+              <% end %>
+
             </div>
           </div>
         </div>
 
-        <div class='col-md-6'>
+        <div class='col-md-offset-1 col-md-5'>
           <div class='product-show-info-side'>
 
             <p class='product-description'>
@@ -31,10 +43,7 @@
               Price: $<%= "%.2f" % Rational(@product.price_in_pennies.to_i,100) %>
             </p>
 
-            <p>
-              <% $redis.incr("#{@product.name}Views") %>
-              Product views: <%= $redis.get("#{@product.name}Views") %>
-            </p>
+
 
             <% if user_signed_in? %>
             <%= form_with(url: '/payments/create') do |form| %>
@@ -45,15 +54,12 @@
             <p><%= link_to('Sign in', new_user_session_path) %> or <%= link_to('sign up', new_user_registration_path) %> to purchase.</p>
             <% end %>
 
-            <% if @product.average_rating != 0 %>
-            <p>Average Rating: <div id='average-rating' class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-            <% else %>
-            <p>No ratings yet.</p>
-            <% end %>
+
 
           </div>
         </div>
       </div>
+      <br />
       <div class='comment-section'>
 
         <%= render 'new_comment' %>

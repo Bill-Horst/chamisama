@@ -15,7 +15,7 @@
 
   .authentication-pages-background {
 
-    padding: 10px 30px;
+    padding: 3px 30px 30px 30px;
     background-color: white;
     opacity: .9;
     width: 40%;
@@ -35,14 +35,12 @@
 
   @media screen and (max-width: 1100px){
     .authentication-pages-background {
-      padding: 10px 30px;
       width: 50%;
     }
   }
 
   @media screen and (max-width: 750px){
     .authentication-pages-background {
-      padding: 10px 30px;
       width: 80%;
     }
   }
@@ -56,7 +54,8 @@
   }
 
   .user-reg-change-back-button {
-    margin-top: -105px;
+    margin-top: -44px;
+    float: left;
   }
 
   .bottom-edit-nav {
@@ -72,12 +71,17 @@
 
 // **SHARED LINKS BUTTONS**
 .shared-links-buttons {
-  line-height: 30px;
-  padding-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.shared-links-buttons div {
+.shared-links-buttons div{
   display: inline-block;
-  margin-left: 15%;
+}
+.forgot-password-link {
+  float: right;
+}
+.forgot-password-sign-up-link {
+  float: right;
 }
 
 

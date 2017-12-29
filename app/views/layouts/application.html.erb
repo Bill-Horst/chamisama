@@ -21,7 +21,7 @@
           <span class="icon-bar"></span>
         </button>
         <!-- BRAND -->
-        <%= link_to "Chamisama", simple_pages_landing_page_path, class: "navbar-brand" %>
+        <%= link_to "Chamisama", root_path, class: "navbar-brand" %>
 
       </div>
 
@@ -29,14 +29,14 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
 
-          <li><%= link_to "About us", simple_pages_about_path %></li>
+          <li><%= link_to "About", simple_pages_about_path %></li>
 
-          <li><%= link_to "Contact Us", simple_pages_contact_path %></li>
+          <li><%= link_to "Contact", simple_pages_contact_path %></li>
 
           <li>
             <%= form_with(url: products_path, method: 'get', local: true, class: "navbar-form") do |form| %>
             <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control", placeholder: "product" %>
-            <%= form.submit 'Search', class: "btn btn-default" %>
+            <%= form.submit 'Search', class: "btn btn-primary" %>
             <% end %>
           </li>
 
@@ -68,7 +68,7 @@
             </ul>
           </li>
           <% else %>
-          <%= link_to('Login', new_user_session_path, class: 'btn btn-default navbar-btn', id: 'sign-in-or-out-button') %>
+          <%= link_to('Login', new_user_session_path, class: 'btn btn-primary navbar-btn', id: 'sign-in-or-out-button') %>
           <% end %>
 
         </ul>
