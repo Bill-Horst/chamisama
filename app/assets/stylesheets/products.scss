@@ -12,6 +12,11 @@
 
   .product-background {
 
+    background-image: url('field.jpg');
+    background-size: cover;
+    min-height: 1200px;
+    padding-top: 48px;
+
     h1 {
       color: black;
       text-align: center;
