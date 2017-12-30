@@ -63,9 +63,21 @@
     text-align: right;
   }
 
+  // ACCORDION ON LOGIN
+  .panel-group {
+    position: fixed;
+    top: 55px;
+    left: 5px;
+  }
+
+  .panel-heading {
+    color: white;
+    text-shadow: black 1px 1px 1px;
+    background-color: orangered;
+  }
+  // END ACCORDION ON LOGIN
+
 }
-
-
 // END AUTHENTICATION PAGES
 
 

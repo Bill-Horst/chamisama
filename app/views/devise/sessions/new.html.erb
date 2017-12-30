@@ -43,15 +43,27 @@
         </div>
       </div>
 
-      <div style='border: 1px solid red;'>
-        <p>*** READ THIS BEFORE SIGINING IN / SIGNING UP ***</p>
-        <p>To view site as user:</p>
-        <p>email: user@user.com</p>
-        <p>password: user11</p>
-        <hr />
-        <p>To view site as admin:</p>
-        <p>email: admin@admin.com</p>
-        <p>password: admin1</p>
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="infoHeading">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#demoInfo" aria-expanded="false" aria-controls="demoInfo">
+                Click here if you're here for a demonstration!
+              </a>
+            </h4>
+          </div>
+          <div id="demoInfo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="infoHeading">
+            <div class="panel-body">
+              <p style='font-weight: bold'>To view site as <em>user</em>:</p>
+              <p>email: user@user.com</p>
+              <p>password: user11</p>
+              <hr />
+              <p style='font-weight: bold'>To view site as <em>admin</em>:</p>
+              <p>email: admin@admin.com</p>
+              <p>password: admin1</p>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>

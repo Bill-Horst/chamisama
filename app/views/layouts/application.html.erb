@@ -43,14 +43,15 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
             <ul class="dropdown-menu">
+              <li><%= link_to "All Products", products_path %></li>
+              <li role="separator" class="divider"></li>
               <li><%= link_to "Green Teas", products_path({ :tea_color => "green"}) %></li>
               <li><%= link_to "Black Teas", products_path({ :tea_color => "black"}) %></li>
               <li role="separator" class="divider"></li>
-              <li><%= link_to "All Japanese Teas", products_path({ :country => "Japan"}) %></li>
+              <li><%= link_to "Japanese Teas", products_path({ :country => "Japan"}) %></li>
+              <li><%= link_to "Chinese Teas", products_path({ :country => "China"}) %></li>
               <li role="separator" class="divider"></li>
-              <li><%= link_to "All Chinese Teas", products_path({ :country => "China"}) %></li>
-              <li role="separator" class="divider"></li>
-              <li><%= link_to "All Products", products_path %></li>
+              <li><%= link_to "Tea Accessories", products_path({ :tea_color => ""}) %></li>
             </ul>
           </li>
 
