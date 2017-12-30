@@ -6,9 +6,9 @@ class UserMailer < ApplicationMailer
     mail(from: email,to: 'bill@billhorst.com',subject: "A new contact form message from #{name}")
   end
 
-  def welcome(user)
+  def welcome(email)
     @appname = "Chamisama"
-    mail(to: user.email, subject: "Welcome to #{@appname}!")
+    mail(to: email, subject: "Welcome to #{@appname}!")
   end
 
   def payment_processed(price, product, email)
