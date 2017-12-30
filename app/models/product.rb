@@ -15,7 +15,7 @@ class Product < ApplicationRecord
     end
   end
 
-  def self.search(color, country)
+  def self.search(color=nil, country=nil)
     if Rails.env.development?
       Product.where("colour LIKE ? OR country LIKE ?", color, country)
       elsif Rails.env.production?
