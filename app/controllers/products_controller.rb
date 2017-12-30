@@ -8,9 +8,7 @@ class ProductsController < ApplicationController
   def index
     search_terms = get_search_terms
     # If search_terms[0] exists, user searched by name, so return products by name, otherwise, search by other criteria:
-    @products = search_terms[0] ?
-    Product.search_by_name(search_terms[0]) :
-    get_products(search_terms)
+    @products = search_terms[0] ? Product.search_by_name(search_terms[0]) : get_products(search_terms)
 
     if @products.length == 0
       @title = "No matches for \"#{params[:q]}\""

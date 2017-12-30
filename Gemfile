@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 
@@ -34,6 +33,33 @@ gem 'jbuilder', '~> 2.5'
 # jQuery
 gem 'jquery-rails'
 
+# for authentication
+gem 'devise'
+
+# for authorization
+gem 'cancancan', '~> 1.10'
+
+#for pagination
+gem 'will_paginate', '~> 3.1.0'
+
+# to be able to accept credit cards
+gem 'stripe'
+
+# to find security issues in app
+gem 'brakeman', :require => false
+
+# for magnifying effect of pictures
+gem 'elevatezoom-rails'
+
+# for memcache
+gem 'dalli'
+
+# redis
+gem 'redis-rails'
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -59,22 +85,3 @@ end
 group :production do
   gem 'pg'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'devise'
-
-gem 'cancancan', '~> 1.10'
-
-gem 'will_paginate', '~> 3.1.0'
-
-gem 'stripe'
-
-gem 'brakeman', :require => false
-
-gem 'elevatezoom-rails'
-
-gem 'dalli'
-
-gem 'redis-rails'

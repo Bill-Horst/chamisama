@@ -37,7 +37,7 @@ Product.create(
     },
     {
       name: 'Brewer',
-      description: 'Perfect for brewing loose tea.',
+      description: 'For brewing loose tea.',
       image_url: 'brewer.jpg',
       colour: '',
       country: '',
@@ -58,6 +58,14 @@ Product.create(
       colour: 'green',
       country: 'Japan',
       price_in_pennies: '9999'
+    },
+    {
+      name: 'Ryokucha',
+      description: 'Standard green tea.',
+      image_url: 'ryokucha.jpg',
+      colour: 'green',
+      country: 'Japan',
+      price_in_pennies: '2399'
     },
     {
       name: 'Shizuoka Black Tea',

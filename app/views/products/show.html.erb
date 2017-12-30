@@ -48,7 +48,7 @@
             <% if user_signed_in? %>
             <%= form_with(url: '/payments/create') do |form| %>
             <%= hidden_field_tag(:product_id, @product.id) %>
-            <%= render partial: "shared/stripe_checkout_button" %>
+            <p><%= render partial: "shared/stripe_checkout_button" %></p>
             <% end %>
             <% else %>
             <p><%= link_to('Sign in', new_user_session_path) %> or <%= link_to('sign up', new_user_registration_path) %> to purchase.</p>
