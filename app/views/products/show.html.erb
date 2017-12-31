@@ -13,7 +13,7 @@
 
       <div data-product-id='<%= @product.id %>' class='row'>
 
-        <div class='col-md-6'>
+        <div class='col-md-5'>
           <div class='product-show-image-side'>
             <div class='thumbnail'>
               <%= image_tag(@product.image_url, class: 'product-show-page-image img-zoom', data_zoom_image: @product.image_url) %>
@@ -28,12 +28,15 @@
           </div>
         </div>
 
-        <div class='col-md-offset-1 col-md-5'>
+        <div class='col-md-7'>
           <div class='product-show-info-side'>
 
-            <p class='product-description'>
-              <%= @product.description %>
-            </p>
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h4><%= @product.description %></h4>
+              </div>
+              <div class="panel-body"><%= @product.story %></div>
+            </div>
 
             <p>
               Color: <%= @product.colour %>
@@ -43,8 +46,6 @@
               Price: $<%= "%.2f" % Rational(@product.price_in_pennies.to_i,100) %>
             </p>
 
-
-
             <% if user_signed_in? %>
             <%= form_with(url: '/payments/create') do |form| %>
             <%= hidden_field_tag(:product_id, @product.id) %>
@@ -53,8 +54,6 @@
             <% else %>
             <p><%= link_to('Sign in', new_user_session_path) %> or <%= link_to('sign up', new_user_registration_path) %> to purchase.</p>
             <% end %>
-
-
 
           </div>
         </div>
