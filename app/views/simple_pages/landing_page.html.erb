@@ -1,17 +1,17 @@
-<div id="carousel" class="carousel slide" data-ride="carousel">
+<div id='carousel' class='carousel slide' data-ride='carousel'>
   <!-- Indicators -->
-  <ol class="carousel-indicators">
+  <ol class='carousel-indicators'>
     <% @products.each_with_index do |product, index| %>
-    <li data-target="#carousel" data-slide-to="<%= index %>" class="<%= "active" if product == @products.first %>"></li>
+    <li data-target='#carousel' data-slide-to='<%= index %>' class='<%= 'active' if product == @products.first %>'></li>
     <% end %>
   </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
+  <div class='carousel-inner' role='listbox'>
     <% @products.each do |product| %>
-    <div class="item<%= " active" if product == @products.first %>">
+    <div class='item<%= ' active' if product == @products.first %>'>
       <%= image_tag(product.image_url, class: 'img-responsive tea-pics') %>
-      <div class="carousel-caption">
+      <div class='carousel-caption'>
         <%= product.name %>
       </div>
     </div>
@@ -19,15 +19,16 @@
   </div>
 
   <!-- Controls -->
-  <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+  <a class='left carousel-control' href='#carousel' role='button' data-slide='prev'>
+    <span class='glyphicon glyphicon-chevron-left' aria-hidden='true'></span>
+    <span class='sr-only'>Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+  <a class='right carousel-control' href='#carousel' role='button' data-slide='next'>
+    <span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span>
+    <span class='sr-only'>Next</span>
   </a>
-</div> <!-- END CAROUSEL -->
+</div>
+<!-- END CAROUSEL -->
 
 <hr />
 
@@ -47,8 +48,58 @@
     <div class='col-md-4'>
       <h1>Tea Accessories</h1>
       <%= image_tag('brewer.jpg', class: 'img-responsive three-desc-pics') %>
-      <p>We have everything you need to get started drinking tea. "All I need is a teapot and a cup!", you say? You want to brew it right, don't you? Get your tea accessories here.</p>
+      <p>We have everything you need to get started drinking tea. 'All I need is a teapot and a cup!', you say? You want to brew it right, don't you? Get your tea accessories here.</p>
     </div>
   </div>
 </div>
 <!-- END THREE DESCRIPTIONS -->
+
+<hr />
+
+<!-- TEA DESCRIPTIONS -->
+<div class='tea-description'>
+  <div class='panel-group' id='accordion'>
+    <h1 class='text-center'>Benefits of Drinking Tea</h1>
+
+    <div class='panel panel-default'>
+      <div class='panel-heading'>
+        <h4 class='panel-title'>
+          <a data-toggle='collapse' data-parent='#accordion' href='#collapseThree'><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> Tea keeps your smile bright</a>
+        </h4>
+      </div>
+      <div id='collapseThree' class='panel-collapse collapse in'>
+        <div class='panel-body'>
+          <p>Japanese researchers found that tea decreases tooth loss. It changes the pH in your mouth when you drink it and prevents cavities. Additionally, tea, unlike many other beverages, does not erode tooth enamel, making it the perfect substitution for toothpaste.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class='panel panel-default'>
+      <div class='panel-heading'>
+        <h4 class='panel-title'>
+          <a data-toggle='collapse' data-parent='#accordion' href='#collapseOne'><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> Tea contains antioxidants</a>
+        </h4>
+      </div>
+      <div id='collapseOne' class='panel-collapse collapse'>
+        <div class='panel-body'>
+          <p>Antioxidants keep us young and protect us from free radicals and hairballs.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class='panel panel-default'>
+      <div class='panel-heading'>
+        <h4 class='panel-title'>
+          <a data-toggle='collapse' data-parent='#accordion' href='#collapseTwo'><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> Tea has less caffeine than coffee</a>
+        </h4>
+      </div>
+      <div id='collapseTwo' class='panel-collapse collapse'>
+        <div class='panel-body'>
+          <p>Herbal blends have no caffeine, while traditional teas have less than half of that in a typical coffee. So instead of giving your 7-year-old a 32 oz Monster Energy BFC and then setting him loose in a crowded movie theater, give him some tea instead and STAY HOME.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END TEA DESCRIPTIONS -->
