@@ -1,9 +1,4 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 // PRODUCT INDEX PAGE
-
 #product-index {
 
   .col-md-4.col-sm-6 {
@@ -59,11 +54,13 @@
     text-decoration: none;
     color: black;
   }
+
   .product-thumbnail {
     transition: all 250ms;
     opacity: .85;
     box-shadow: 1px 1px 1px black;
   }
+
   .product-thumbnail:hover {
     transform: translate(-1.5px, -3px);
     opacity: 1;
@@ -95,12 +92,10 @@
   }
 
 }
-
 // END PRODUCT INDEX PAGE
 
 
 // PRODUCT SHOW PAGE
-
 #product-show {
 
   h1.product-name {
@@ -187,50 +182,54 @@
       background-color: #fff;
       border-color: #ccc;
     }
+
     .previous_page:hover, .next_page:hover {
       color: #333;
       background-color: #e6e6e6;
       border-color: #adadad;
     }
+
     >em {
       font-size: 1.5em;
       color: black;
     }
+
     >a {
       font-size: .9em;
       color: grey;
     }
+
     >em,>a {
       margin-left: 10px;
     }
+
     @media screen and (max-width: 600px){
       .previous_page, .next_page {
         font-size: 12px;
         padding: 3px 6px;
       }
+
       em,a {
         margin-left: 5px;
       }
+
       em {
         font-size: 1.2em;
       }
+
       a {
         font-size: .6em;
       }
     }
   }
   // END PAGINATION SECTION **
-
 }
-
 // END PRODUCT SHOW PAGE
 
 
 // PRODUCT CREATE / EDIT FORM
-
 .product-form {
   width: 50%;
   margin: auto;
 }
-
 // END PRODUCT CREATE / EDIT FORM

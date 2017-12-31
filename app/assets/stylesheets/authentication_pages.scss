@@ -1,11 +1,6 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 // DEVISE ********
 
 // AUTHENTICATION PAGES
-
 #authentication-pages {
 
   background-image: url('arashiyama.jpeg');
@@ -76,7 +71,6 @@
     background-color: orangered;
   }
   // END ACCORDION ON LOGIN
-
 }
 // END AUTHENTICATION PAGES
 
@@ -95,6 +89,5 @@
 .forgot-password-sign-up-link {
   float: right;
 }
-
-
+// **END SHARED LINKS BUTTONS**
 // END DEVISE *********
