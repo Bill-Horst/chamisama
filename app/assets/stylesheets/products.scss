@@ -160,6 +160,15 @@
     font-size: 1.1em;
   }
 
+  .price-and-pay-section {
+    border: black 1px solid;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    background-color: lightgray;
+  }
+
   // PAGINATION SECTION **
   .pagination {
     .previous_page, .next_page {

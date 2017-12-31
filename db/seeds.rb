@@ -54,7 +54,7 @@ Product.create(
       colour: 'green',
       country: 'China',
       price_in_pennies: '6999',
-      story: 'Native to the shores of West Lake near Hangzhou, the old emperor city, this legendary and prized green tea unfolds with a great, flower-like bouquet underscored by notes of fresh cinnamon buns. The “Dragonwell” Long Jing appeals with a wonderfully smooth, full-bodied taste. It\'s wonderful to drink while watching the sunset with your cat.'
+      story: 'Native to the shores of West Lake near Hangzhou, the old emperor city, this legendary and prized green tea unfolds with a great, flower-like bouquet underscored by notes of fresh cinnamon buns. The “Dragonwell” Long Jing appeals with a wonderfully smooth, full-bodied taste. It\'s wonderful to drink while watching the sunset with your panther.'
     },
     {
       name: 'Gyokuro Powder',
@@ -103,12 +103,12 @@ Product.create(
     },
     {
       name: 'Teacup Set',
-      description: 'Set of four Japanese teacups',
+      description: 'Set of four Japanese teacups.',
       image_url: 'teacups.jpg',
       colour: '',
       country: '',
       price_in_pennies: '3999',
-      story: 'This teacup set enables the user to drink tea, and only tea, at any time of the day the user wishes. There are four of them, which means the user can either drink four different kinds of tea at once, or the same kind of tea in succession without having to wash the teacup before drinking again. When choosing which path to take, it is best the user not decide for himself / herself. Such a decision is best left to a professional.'
+      story: 'This teacup set enables the user to drink tea, and only tea, at any time of the day the user wishes. There are four of them, which means the user can either drink four different kinds of tea at once, or the same kind of tea in succession without having to wash the teacup before drinking again. In such a case, it is best to at least rinse the cup while it sits in the sink so that it is easier to wash when it comes time.'
     }
   ]
 )
