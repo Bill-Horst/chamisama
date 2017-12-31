@@ -8,7 +8,6 @@ class CommentUpdateJob < ApplicationJob
   private
 
   def render_comment(comment, current_user)
-    CommentsController.render(partial: 'comments/comment', locals: {current_user: current_user, comment: comment})
+    CommentsController.render(partial: 'comments/comment', locals: { current_user: current_user, comment: comment })
   end
-
 end

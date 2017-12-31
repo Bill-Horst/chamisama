@@ -12,7 +12,6 @@ class Ability
       can :read, Order
     end
   end
-
 end
 
 # Define abilities for the passed in user here. For example:

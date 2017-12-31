@@ -4,35 +4,30 @@ describe UsersController, type: :controller do
   let(:user) { FactoryBot.create(:user) }
   let(:user2) { FactoryBot.create(:user) }
 
-# -------------------------------------- GET INDEX
-    describe 'GET #index' do
+  # -------------------------------------- GET INDEX
+  describe 'GET #index' do
+    context 'when a user is logged in' do
+      before do
+        sign_in user
 
-      context 'when a user is logged in' do
-        before do
-          sign_in user
-
-          it 'can view user index' do
-            get :index
-            expect(response).to redirect_to(users_path)
-          end
-
-        end
-      end
-
-      context 'when a user is not logged in' do
-
-        it 'cannot view user index' do
+        it 'can view user index' do
           get :index
-          expect(response).to redirect_to(new_user_session_path)
+          expect(response).to redirect_to(users_path)
         end
-
       end
+    end
 
-    end # END GET INDEX
+    context 'when a user is not logged in' do
+      it 'cannot view user index' do
+        get :index
+        expect(response).to redirect_to(new_user_session_path)
+      end
+    end
+  end
+  # END GET INDEX
 
-# -------------------------------------- GET SHOW
+  # -------------------------------------- GET SHOW
   describe 'GET #show' do
-
     context 'when a user is logged in' do
       before do
         sign_in user
@@ -46,22 +41,19 @@ describe UsersController, type: :controller do
           get :show, params: { id: user2.id }
           expect(response).to redirect_to(root_path)
         end
-
       end
     end
 
     context 'when a user is not logged in' do
-
       it 'redirects to login' do
         get :show, params: { id: user.id }
         expect(response).to redirect_to(new_user_session_path)
       end
-
     end
+  end
+  # END GET SHOW
 
-  end # END GET SHOW
-
-# -------------------------------------- GET EDIT
+  # -------------------------------------- GET EDIT
   describe 'GET #edit' do
     context 'when user is logged in' do
       before do
@@ -81,13 +73,12 @@ describe UsersController, type: :controller do
     end
 
     context 'when user is not logged in' do
-
       it 'cannot edit any user info' do
         get :edit, params: { id: user.id }
         expect(response).to redirect_to(new_user_session_path)
       end
     end
-
-  end # END GET EDIT
-
-end # END DESCRIBE USERS CONTROLLER
+  end
+  # END GET EDIT
+end
+# END DESCRIBE USERS CONTROLLER

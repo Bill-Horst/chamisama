@@ -69,7 +69,7 @@ Product.create(
     },
     {
       name: 'Shizuoka Black Tea',
-      description: 'Black "Red" tea from Shizuoka.',
+      description: 'Black (Red) tea from Shizuoka.',
       image_url: 'shizu_black.jpg',
       colour: 'black',
       country: 'Japan',
@@ -107,140 +107,140 @@ Comment.create(
     {
       body: 'Ok, not bad',
       rating: 3,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Great product',
       rating: 5,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'NO!',
       rating: 1,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Superb quality',
       rating: 5,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Pretty good!',
       rating: 4,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Terrible!',
       rating: 1,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Ok, not bad',
       rating: 3,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Not great',
       rating: 2,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Ok',
       rating: 3,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Good thing!',
       rating: 4,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'So so',
       rating: 3,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'I\'m glad it\'s healthy',
       rating: 3,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Ok, not bad',
       rating: 3,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Great product',
       rating: 5,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'NO!',
       rating: 1,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Superb quality',
       rating: 5,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Pretty good!',
       rating: 4,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Terrible!',
       rating: 1,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Ok, not bad',
       rating: 3,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Not great',
       rating: 2,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Ok',
       rating: 3,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'Good thing!',
       rating: 4,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
     },
     {
       body: 'So so',
       rating: 3,
-      user_id: User.order("RANDOM()").first.id,
-      product_id: Product.order("RANDOM()").first.id
-    },
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    }
   ]
 )

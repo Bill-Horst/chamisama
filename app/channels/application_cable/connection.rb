@@ -7,7 +7,6 @@ module ApplicationCable
     end
 
     def disconnect
-
     end
 
     protected

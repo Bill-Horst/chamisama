@@ -6,7 +6,6 @@ describe ProductsController, type: :controller do
   let(:user) { FactoryBot.create(:user) }
   let(:admin) { FactoryBot.create(:admin) }
 
-
   # -------------------------------------- GET INDEX
   describe 'GET #index' do
     context 'when a user goes to index page' do
@@ -15,8 +14,10 @@ describe ProductsController, type: :controller do
         expect(response).to be_ok
         expect(response).to render_template('index')
       end
-    end # END CONTEXT
-  end # END GET INDEX
+    end
+    # END CONTEXT
+  end
+  # END GET INDEX
 
   # -------------------------------------- GET SHOW
   describe 'GET #show' do
@@ -25,8 +26,10 @@ describe ProductsController, type: :controller do
         get :show, params: { id: product.id }
         expect(assigns(:product)).to eq product
       end
-    end # END CONTEXT
-  end # END GET SHOW
+    end
+    # END CONTEXT
+  end
+  # END GET SHOW
 
   # -------------------------------------- GET EDIT
   describe 'GET #edit' do
@@ -39,7 +42,8 @@ describe ProductsController, type: :controller do
           expect(response).to redirect_to('edit')
         end
       end
-    end # END CONTEXT
+    end
+    # END CONTEXT
 
     context 'when a non-admin user goes to edit a product' do
       before do
@@ -50,7 +54,8 @@ describe ProductsController, type: :controller do
           expect(response).to redirect_to(root_path)
         end
       end
-    end # END CONTEXT
+    end
+    # END CONTEXT
 
     context 'when someone not signed in goes to edit a product' do
       it 'should redirect him/her to root path' do
@@ -58,13 +63,13 @@ describe ProductsController, type: :controller do
         expect(assigns(:product)).to eq product
         expect(response).to redirect_to(root_path)
       end
-    end # END CONTEXT
-
-  end # END GET EDIT
+    end
+    # END CONTEXT
+  end
+  # END GET EDIT
 
   # -------------------------------------- POST CREATE
   describe 'POST #create' do
-
     context 'when an admin submits a new product' do
       before do
         sign_in admin
@@ -79,8 +84,8 @@ describe ProductsController, type: :controller do
         end
       end
     end
-
-  end # END POST CREATE
+  end
+  # END POST CREATE
 
   # -------------------------------------- PUT UPDATE
   describe 'PUT #update' do
@@ -100,7 +105,8 @@ describe ProductsController, type: :controller do
         end
       end
     end
-  end # END POST CREATE
+  end
+  # END POST CREATE
 
   # -------------------------------------- DELETE DESTROY
   context 'DELETE #destroy' do
@@ -109,9 +115,11 @@ describe ProductsController, type: :controller do
 
       it 'deletes product by id' do
         delete :destroy, params: { product: product_to_delete }
-        expect(notice).to eq "Product was successfully destroyed."
+        expect(notice).to eq 'Product was successfully destroyed.'
       end
-    end # END BEFORE DO
-  end # END DELETE DESTROY
-
-end # END DESCRIBE PRODUCTS CONTROLLER
+    end
+    # END BEFORE DO
+  end
+  # END DELETE DESTROY
+end
+# END DESCRIBE PRODUCTS CONTROLLER

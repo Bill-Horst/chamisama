@@ -8,7 +8,7 @@ class PaymentsController < ApplicationController
     begin
       charge = Stripe::Charge.create(
         amount: @product.price_in_pennies, # amount in cents, again
-        currency: "usd",
+        currency: 'usd',
         source: token,
         description: params[:stripeEmail]
       )
@@ -26,15 +26,11 @@ class PaymentsController < ApplicationController
             format.json { render json: @order.errors, status: :unprocessable_entity }
           end
         end
-
       end
-
     rescue Stripe::CardError => e
       body = e.json_body
       err = body[:error]
       flash[:error] = "Unfortuntaely, there was an error processing the payment: #{err[:message]}"
     end
-
   end
-
 end

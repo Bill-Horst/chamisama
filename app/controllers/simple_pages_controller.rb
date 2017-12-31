@@ -1,10 +1,9 @@
 class SimplePagesController < ApplicationController
-
   def index
   end
 
   def landing_page
-    @products = Product.order("RANDOM()").limit(6)
+    @products = Product.order('RANDOM()').limit(6)
   end
 
   def thank_you
@@ -13,5 +12,4 @@ class SimplePagesController < ApplicationController
     @message = params[:message]
     UserMailer.contact_form(@email, @name, @message).deliver_now
   end
-
 end
