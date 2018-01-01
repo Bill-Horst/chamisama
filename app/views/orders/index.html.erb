@@ -4,10 +4,11 @@
 
     <div class="row">
       <% @orders.each do |order| %>
-      <div class="individual-orders">
+      <%= link_to order, :class => 'individual-order-link' do %>
+      <div class='individual-orders'>
         <h3>
           Order # <%= order.id %>:
-          <%= link_to order.product.name, order.product %>
+          <%= order.product.name %>
         </h3>
         <% if current_user.admin? %>
         <p>Name: <%= "#{order.user.first_name} #{order.user.last_name}" %></p>
@@ -15,8 +16,10 @@
         <% end %>
         <p><%= order.product.description %></p>
         <strong>$<%= "%.2f" % Rational(order.product.price_in_pennies.to_i,100) %></strong>
-      </div><!-- /col -->
+      </div>
+      <% end %>
       <% end %>
     </div>
+
   </div>
-</div><%=  %>
+</div>

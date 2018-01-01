@@ -16,6 +16,17 @@
     width: 80%;
     margin: 30px auto;
     padding: 10px;
+    position: relative;
+  }
+
+  .individual-order-link {
+    text-decoration: none;
+    color: black;
+  }
+
+  .individual-orders:hover {
+    top: -3px;
+    left: -2px;
   }
 }
 
@@ -41,6 +52,15 @@
 
   .product-show-page-image {
     height: 300px;
+    position: relative;
+  }
+
+  .order-show-page-image {
+    position: relative;
+  }
+
+  .order-show-page-image:hover {
+    top: -5px;
   }
 
 }
