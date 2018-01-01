@@ -5,10 +5,10 @@
     <div class="row">
       <% @orders.each do |order| %>
       <div class="individual-orders">
-        <h1>
+        <h3>
           Order # <%= order.id %>:
           <%= link_to order.product.name, order.product %>
-        </h1>
+        </h3>
         <% if current_user.admin? %>
         <p>Name: <%= "#{order.user.first_name} #{order.user.last_name}" %></p>
         <p>Email: <%= order.user.email %></p>
