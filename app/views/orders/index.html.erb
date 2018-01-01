@@ -1,5 +1,22 @@
-<h1>Orders index page</h1>
-<% @orders.each do |order| %>
-  <p><%= order.id %></p>
-  <p><%= order.total %></p>
-<% end %>
+<div id='order-index'>
+  <div class='order-background'>
+    <h1 class='text-center'>Orders</h1>
+
+    <div class="row">
+      <% @orders.each do |order| %>
+      <div class="individual-orders">
+        <h1>
+          Order # <%= order.id %>:
+          <%= link_to order.product.name, order.product %>
+        </h1>
+        <% if current_user.admin? %>
+        <p>Name: <%= "#{order.user.first_name} #{order.user.last_name}" %></p>
+        <p>Email: <%= order.user.email %></p>
+        <% end %>
+        <p><%= order.product.description %></p>
+        <strong>$<%= "%.2f" % Rational(order.product.price_in_pennies.to_i,100) %></strong>
+      </div><!-- /col -->
+      <% end %>
+    </div>
+  </div>
+</div><%=  %>

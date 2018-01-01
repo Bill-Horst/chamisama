@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Order.delete_all
 Comment.delete_all
 Product.delete_all
 
@@ -250,6 +251,91 @@ Comment.create(
     {
       body: 'So so',
       rating: 3,
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    }
+  ]
+)
+
+Order.create(
+  [
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
+      user_id: User.order('RANDOM()').first.id,
+      product_id: Product.order('RANDOM()').first.id
+    },
+    {
       user_id: User.order('RANDOM()').first.id,
       product_id: Product.order('RANDOM()').first.id
     }
