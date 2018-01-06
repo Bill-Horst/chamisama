@@ -16,4 +16,5 @@
 //= require bootstrap-sprockets
 //= require scripts.js
 //= require jquery.elevateZoom-3.0.8.min
+//= require jquery.raty.js
 //= require_tree .
