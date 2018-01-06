@@ -1,4 +1,6 @@
+
 let refreshRating = function() {
+
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
@@ -15,4 +17,7 @@ let refreshRating = function() {
       return $(this).attr('data-score');
     }
   });
+
+  $('.rating').raty('reload');
+  $('.rated').raty('reload');
 }
