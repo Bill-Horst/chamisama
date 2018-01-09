@@ -7,8 +7,7 @@
       </h1>
 
       <span>
-        <% $redis.incr("#{@product.name}Views") %>
-        Product views: <%= $redis.get("#{@product.name}Views") %>
+        Product views: <%= @product.views %>
       </span>
 
       <div data-product-id='<%= @product.id %>' class='row'>
